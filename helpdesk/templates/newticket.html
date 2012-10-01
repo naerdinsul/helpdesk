@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Technology Help Desk</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javaScript" language="javascript">
+	var strText = "Please enter a description of the computer problem you're having.  Be specific!";
+	var defColor = "#888";
+	var regColor = "#000";
+	
+	function ClearTextarea() {
+		if( document.TechReq.probdesc.value == strText ) {
+			document.TechReq.probdesc.value = "";
+			document.TechReq.probdesc.style.color = regColor;
+		}
+	}
+	
+	function FillTextarea() {
+		if( document.TechReq.probdesc.value == "" ) {
+			document.TechReq.probdesc.value = strText;
+			document.TechReq.probdesc.style.color = defColor;
+		}
+	}
+	
+	function CheckFields() {
+			if( document.TechReq.username.value=="" ) {
+					alert("Please input your NAME");
+					document.TechReq.username.focus();
+					return false;
+			}
+			
+			if( document.TechReq.email.value=="" ) {
+					alert("Please input your E-MAIL Address");
+					document.TechReq.email.focus();
+					return false;
+			}
+			
+			if( document.TechReq.roomnum.value=="" ) {
+					alert("Please fill in your ROOM NUMBER");
+					document.TechReq.roomnum.focus();
+					return false;
+			} 
+			
+			if( document.TechReq.building.selectedIndex == "0" ) {
+					alert("Please select your BUILDING");
+					document.TechReq.building.focus();
+					return false;
+			}
+						
+			if( document.TechReq.probdesc.value == strText || document.TechReq.probdesc.value == "" ) {
+					alert("Please describe the COMPUTER PROBLEM you're having");
+					document.TechReq.probdesc.focus();
+					return false;
+			}
+			
+			return true;
+	}
+  </script>
+</head>
+
+<body onload="javascript: document.TechReq.probdesc.style.color = defColor;">
+
+	<div id="header"><h1>Technology Help Desk</h1></div>
+	<div id="wrapper">
+		<form class="cssform" name="TechReq" action="FMPro" method="POST" id="TechReq">
+		<input type="hidden" name="-DB" value="techreq.fp5" />
+		<input type="hidden" name="-Format" value="thanks.html" />
+		<input type="hidden" name="-Error" value="error.html" />
+			<p><label for="username">Name</label>
+			<input type="text" name="username" id="username"></p>
+			<p><label for="roomnum">Room Number</label>
+			<input type="text" name="roomnum" id="roomnum"></p>
+			<p><label for="building">Building</label>
+			<select name="building" id="building">
+				<option selected>-- Select a building --</option>
+				<option>Portsmouth West Elementary School</option>
+				<option>Portsmouth West Middle School</option>
+				<option>Portsmouth West High School</option>
+				<option>District Board Office</option>
+			</select>
+			<p><label for="probdesc">Problem Description</label>
+			<textarea name="probdesc" onclick="ClearTextarea()" onfocus="ClearTextarea()" onblur="FillTextarea()">Please enter a description of the computer problem you're having.  Be specific!</textarea>
+			<p><input type="submit" name="-New" value="Submit Request" onclick="return CheckFields()"></p>
+		</form>
+	</div>
+	<div id="footer"></div>
+	<div class="copyright">&copy;2011, Washington-Nile Local School District</div>
+
+</body>
+</html>

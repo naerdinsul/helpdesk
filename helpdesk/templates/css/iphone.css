@@ -1,0 +1,166 @@
+/* Mobile Styles */
+/* -------------------------------------------------------------------------------------- */
+@media screen and (max-device-width: 480px){
+
+	body {
+		margin: 0px;
+		padding: 0px;
+		margin-top: 20px;
+		background-color: #6C6E6B;
+		font-family: sans-serif;
+		color: #FF6400;
+	}
+
+	h1 {
+		margin-left: 100px;
+		padding-top: 20px;
+	}
+
+	div {
+		margin: 0;
+		padding: 0;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+
+	#header {
+		width: 440px;
+		height: 90px;
+		margin: 0 auto;
+		background: url(../images/iphone-header.png) no-repeat left top;
+		background-color: #fff;
+	}
+
+	#wrapper {
+		width: 400px;
+		background: #fff;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+	}
+
+	#footer {
+		width: 440px;
+		height: 30px;
+		margin: 0 auto;
+		background: url(../images/iphone-footer.png) no-repeat left top;
+	}
+
+	.rowheader {
+		background-color: #ccc;
+		margin-top: 50px;
+		text-align: center;
+	}
+
+	.rowcol {
+		float:left;
+		width: 33%;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	.row-item-red {
+		color: #F00;
+		font-weight: bold;
+	}
+
+	.row-item-yellow {
+		color: #92CD00;
+		font-weight: bold;
+	}
+
+	.row-item-green {
+		color: #FFDE00;
+		font-weight: bold;
+	}
+
+	.response-good {
+		background: #90EE90;
+		color: #006400;
+		border: 1px dashed #006400;
+		padding: 5px;
+	}
+
+	.response-bad {
+		background: #F08080;
+		color: #8B0000;
+		border: 1px dashed #8B0000;
+		padding: 5px;
+		margin-bottom: 15px;
+	}
+
+	.copyright{
+		color: #ccc;
+		padding-top: 5px;
+		text-align: center;
+		font-size: x-small;
+		}
+
+	.text-header {
+		color: #FF6400;
+		font-weight: bold;
+	}
+
+	.text-body {
+		color: #000;
+	}
+		
+	.techreqrecord {
+		border-top: 1px dashed 	#808080;
+		padding: 5px 0 8px 0;
+	}
+
+	.techreqlink {
+		display: block;
+		text-decoration: none;
+	}
+
+	.techreqlink:hover {
+		display: block;
+		text-decoration: none;
+		background-color: #F1CFAF;
+	}
+
+	/* CSS Nicify-Forms */
+	/* Taken from Dynamic Drive CSS library
+	/* http://www.dynamicdrive.com/style/
+	/* -------------------------------------------------------------------------------------- */
+	.cssform p {
+		display: block;
+		width: 335px;
+		margin: 0;
+		padding: 5px 0 8px 0;
+		border-top: 1px dashed 	#808080;
+		color: #FF6400;
+		height: 1%;
+	}
+
+	.cssform label {
+		display: block;
+		font-weight: bold;
+	}
+
+	.cssform input[type="text"], input[type="password"] {
+		width: 325px; /*width of text boxes. IE6 does not understand this attribute*/
+	}
+
+	.cssform select {
+		width: 331px;
+	}
+
+	.cssform textarea {
+		width: 325px;
+		height: 100px;
+		overflow: auto;
+	}
+
+	.cssform input[type="submit"], input[type="button"] {
+		float: right;
+		margin-left: 5px;
+	}
+
+}
