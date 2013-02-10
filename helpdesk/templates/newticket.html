@@ -63,24 +63,9 @@
 
 	<div id="header"><h1>Technology Help Desk</h1></div>
 	<div id="wrapper">
-		<form class="cssform" name="TechReq" action="FMPro" method="POST" id="TechReq">
-		<input type="hidden" name="-DB" value="techreq.fp5" />
-		<input type="hidden" name="-Format" value="thanks.html" />
-		<input type="hidden" name="-Error" value="error.html" />
-			<p><label for="username">Name</label>
-			<input type="text" name="username" id="username"></p>
-			<p><label for="roomnum">Room Number</label>
-			<input type="text" name="roomnum" id="roomnum"></p>
-			<p><label for="building">Building</label>
-			<select name="building" id="building">
-				<option selected>-- Select a building --</option>
-				<option>Portsmouth West Elementary School</option>
-				<option>Portsmouth West Middle School</option>
-				<option>Portsmouth West High School</option>
-				<option>District Board Office</option>
-			</select>
-			<p><label for="probdesc">Problem Description</label>
-			<textarea name="probdesc" onclick="ClearTextarea()" onfocus="ClearTextarea()" onblur="FillTextarea()">Please enter a description of the computer problem you're having.  Be specific!</textarea>
+		<form class="cssform" method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
 			<p><input type="submit" name="-New" value="Submit Request" onclick="return CheckFields()"></p>
 		</form>
 	</div>

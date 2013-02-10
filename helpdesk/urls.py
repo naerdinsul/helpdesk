@@ -1,7 +1,8 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('',
+urlpatterns = patterns('helpdesk.views',
 
-	url( r'^$', 'helpdesk.views.newticket' ),
+	url( r'^thanks/$', 'thanks' ),
+	url( r'^$', 'newticket' ),
 
 )

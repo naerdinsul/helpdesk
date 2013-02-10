@@ -117,6 +117,10 @@ a {
 	background-color: #F1CFAF;
 }
 
+.errorlist {
+	display: none;
+}
+
 /* CSS Nicify-Forms */
 /* Taken from Dynamic Drive CSS library
 /* http://www.dynamicdrive.com/style/
